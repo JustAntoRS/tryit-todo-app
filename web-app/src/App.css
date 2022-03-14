@@ -1,38 +1,65 @@
-.App {
+* {
+  margin: 0;
+}
+
+.tryit-todo-app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.tryit-todo-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tryit-todo-task, .tryit-todo-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vh;
+  flex: 1 1 0px;
+  align-self: start;
+  margin: 1vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tryit-todo-toolbar-textarea {
+  background: transparent;
+  border: 0.2vh solid white;
+}
+
+button {
+  background-color:#4cb3a5;
+  border: none;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  width: 15vh;
+  font-size: calc(7px + 2vmin);
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: max-content;
+  height: 4vh;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+.tryit-todo-separator {
+  border: 0;
+  border-top: 3px dashed white;
 }
